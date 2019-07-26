@@ -27,7 +27,7 @@ passport.use(new SamlStrategy(
     return done(null,
     {
       id: profile['nameID'],
-      email: profile['http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress'],
+      email: profile['nameID'],
       displayName: profile['http://schemas.microsoft.com/identity/claims/displayname'],
       firstName: profile['http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname'],
       lastName: profile['http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname']
